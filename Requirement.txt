@@ -1,0 +1,5 @@
+Django==4.2.13
+gunicorn==21.2.0
+whitenoise==6.7.0
+yt-dlp>=2024.11.4
+requests==2.32.3

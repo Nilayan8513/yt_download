@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: yt-vault
+    env: python
+    buildCommand: "./build.sh"
+    # --timeout 600  : 4K files can take several minutes to fetch + merge + stream
+    # --keep-alive 5 : keep TCP connections alive during chunked streaming
+    # --workers 2    : 2 sync workers — each handles one blocking download at a time
+    startCommand: "gunicorn youtube_downloader.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 600 --keep-alive 5"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: PYTHON_VERSION
+        value: "3.11.0"
+      - key: FFMPEG_PATH
+        value: "/usr/bin/ffmpeg"
