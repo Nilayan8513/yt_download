@@ -26,6 +26,66 @@
 
 ---
 
+## 🎞️ FFmpeg Installation Guide
+
+FFmpeg is **required** for downloads above 720p (it merges separate video + audio streams).
+
+<details>
+<summary>🪟 <b>Windows</b></summary>
+
+1. Download FFmpeg from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/) — grab the **ffmpeg-release-essentials.zip**
+2. Extract the zip to a folder, e.g. `C:\ffmpeg`
+3. Inside you'll find `C:\ffmpeg\bin\ffmpeg.exe`
+4. **Add to PATH:**
+   - Press `Win + S` and search **"Environment Variables"**
+   - Click **"Edit the system environment variables"**
+   - Click **Environment Variables** button
+   - Under **System variables**, find `Path` and click **Edit**
+   - Click **New** and add: `C:\ffmpeg\bin`
+   - Click **OK** on all windows
+5. **Verify** — open a new terminal and run:
+   ```bash
+   ffmpeg -version
+   ```
+
+</details>
+
+<details>
+<summary>🍎 <b>macOS</b></summary>
+
+Using [Homebrew](https://brew.sh/):
+
+```bash
+brew install ffmpeg
+```
+
+FFmpeg is automatically added to PATH. Verify with:
+
+```bash
+ffmpeg -version
+```
+
+</details>
+
+<details>
+<summary>🐧 <b>Linux (Ubuntu/Debian)</b></summary>
+
+```bash
+sudo apt update && sudo apt install ffmpeg -y
+```
+
+FFmpeg is automatically added to PATH. Verify with:
+
+```bash
+ffmpeg -version
+```
+
+</details>
+
+> **Tip:** If you see `ffmpeg is not recognized` or `command not found`, restart your terminal after installing.
+
+---
+
 ## 🚀 Quick Start
 
 ```bash
