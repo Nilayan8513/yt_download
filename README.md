@@ -11,15 +11,9 @@
 
 **Download YouTube videos up to 4K or extract audio as MP3 — fast, clean, no sign-in.**
 
-</div>
-
 ---
 
-<div align="center">
-  <img src="preview.jpeg" width="400" alt="YT Vault UI" />
 </div>
-
----
 
 ## ✨ Features
 
@@ -133,8 +127,6 @@ yt_download/
 │   │   └── index.html     # Single-page UI
 │   ├── views.py           # API endpoints & download logic
 │   └── urls.py            # App routing
-├── assets/
-│   └── preview.png        # UI screenshot
 ├── manage.py
 ├── Requirement.txt
 └── build.sh               # Render deployment script
